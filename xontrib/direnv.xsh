@@ -1,5 +1,5 @@
 @events.on_chdir
-def direnv(olddir, newdir, **kw):
+def __direnv(olddir, newdir, **kw):
     r = !(direnv export bash)
     r.end()
     if len(r.output) > 0:
