@@ -1,0 +1,3 @@
+# direnv for xonsh
+
+## install
