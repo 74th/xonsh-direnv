@@ -1,11 +1,15 @@
 from setuptools import setup
 
+with open("README.rst", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name="xonsh-direnv",
-    version="0.1.0",
+    version="0.1.1",
     license="MIT",
     url="https://github.com/74th/xonsh-direnv",
     description="direnv support for the xonsh shell",
+    long_description=long_description,
     author="74th",
     author_email="site@74th.tech",
     packages=['xontrib'],

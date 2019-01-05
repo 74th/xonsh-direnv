@@ -1,0 +1,4 @@
+.vscode/
+build/
+dist/
+xonsh_direnv.egg-info/
