@@ -10,3 +10,13 @@ This works with python 3.7.0, xonsh 0.8.8 and direnv 2.17.0.
 
 	xpip install xonsh-direnv
 	xontrib load direnv
+
+
+change log
+==========
+
+1.3
+---
+
+* $HOME/.envrc
+* effecting `direnv allow` immediately
