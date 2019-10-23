@@ -1,10 +1,10 @@
-import json
+import json, subprocess
 
 def __direnv():
-    r = !(direnv export json)
-    r.end()
-    if len(r.output) > 0:
-        lines = json.loads(r.output)
+    p = subprocess.Popen('direnv export json'.split(), stdout=subprocess.PIPE)
+    r, _ = p.communicate()
+    if len(r) > 0:
+        lines = json.loads(r)
         for k,v in lines.items():
             if v is None:
                 del(__xonsh__.env[k])
