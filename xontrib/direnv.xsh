@@ -13,7 +13,15 @@ def __direnv():
                 __xonsh__.env[k] = v
 
 @events.on_post_rc
-def __direnv_chdir() -> None:
+def __direnv_post_rc() -> None:
+    __direnv()
+
+@events.on_chdir
+def __direnv_chdir(olddir: str, newdir: str) -> None:
+    __direnv()
+
+@events.on_precommand
+def __direnv_precommand(cmd: str) -> None:
     __direnv()
 
 @events.on_postcommand
