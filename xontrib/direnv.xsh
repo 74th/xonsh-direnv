@@ -1,5 +1,8 @@
 import json, subprocess
 
+# workaround for https://github.com/74th/xonsh-direnv/issues/2
+$UPDATE_OS_ENVIRON = True
+
 def __direnv():
     p = subprocess.Popen('direnv export json'.split(), stdout=subprocess.PIPE)
     r, _ = p.communicate()
