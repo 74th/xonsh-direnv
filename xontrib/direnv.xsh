@@ -8,7 +8,7 @@ def __direnv():
         lines = json.loads(r)
         for k,v in lines.items():
             if v is None:
-                del(__xonsh__.env[k])
+                del __xonsh__.env[k]
             else:
                 __xonsh__.env[k] = v
 
