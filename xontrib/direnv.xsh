@@ -3,7 +3,8 @@ import json, subprocess
 def __direnv():
     p = subprocess.Popen('direnv export json'.split(), stdout=subprocess.PIPE)
     r, _ = p.communicate()
-    if len(r) > 0:
+    p.wait()
+    if r and p.returncode == 0:
         lines = json.loads(r)
         for k,v in lines.items():
             if v is None:
