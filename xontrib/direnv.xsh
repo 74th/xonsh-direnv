@@ -4,12 +4,16 @@ import json, subprocess
 $UPDATE_OS_ENVIRON = True
 
 def __direnv():
-    p = subprocess.Popen('direnv export json'.split(), stdout=subprocess.PIPE)
+    p = subprocess.Popen(
+        'direnv export json'.split(),
+        stdout=subprocess.PIPE,
+        env=__xonsh__.env.detype()
+    )
     r, _ = p.communicate()
     p.wait()
     if r and p.returncode == 0:
         lines = json.loads(r)
-        for k,v in lines.items():
+        for k, v in lines.items():
             if v is None:
                 del __xonsh__.env[k]
             else:
