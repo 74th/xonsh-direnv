@@ -15,6 +15,11 @@ This works with python 3.7.0, xonsh 0.8.8 and direnv 2.17.0.
 change log
 ==========
 
+1.5
+---
+
+* fix https://github.com/74th/xonsh-direnv/issues/2
+
 1.4
 ---
 
