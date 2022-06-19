@@ -1,4 +1,4 @@
-import json, subprocess
+import json
 
 # workaround for https://github.com/74th/xonsh-direnv/issues/2
 $UPDATE_OS_ENVIRON = True
