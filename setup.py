@@ -5,13 +5,13 @@ with open("README.rst", "r") as fh:
 
 setup(
     name="xonsh-direnv",
-    version="1.6.0",
+    version="1.7.0",
     license="MIT",
-    url="https://github.com/74th/xonsh-direnv",
+    url="https://github.com/greg-hellings/xonsh-direnv",
     description="direnv support for the xonsh shell",
     long_description=long_description,
-    author="74th",
-    author_email="site@74th.tech",
+    author="Greg Hellings",
+    author_email="greg@thehellings.com",
     packages=['xontrib'],
     package_dir={'xontrib': 'xontrib'},
     package_data={'xontrib': ['*.xsh']},

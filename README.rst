@@ -4,16 +4,21 @@ https://direnv.net
 
 https://xon.sh
 
-This works with python 3.7.0, xonsh 0.8.8 and direnv 2.17.0.
+This works with python 3.11.0, xonsh 0.17.0 and direnv 2.34.0.
 
 ::
 
-	xpip install xonsh-direnv
+	xpip install "git+https://github.com/greg-hellings/xonsh-direnv@master"
 	xontrib load direnv
 
 
 change log
 ==========
+
+1.7.0
+---
+
+* Added support for `kwargs` to methods, required by xonsh
 
 1.6.0
 ---

@@ -14,11 +14,11 @@ def __direnv():
                 __xonsh__.env[k] = v
 
 @events.on_post_rc
-def __direnv_post_rc() -> None:
+def __direnv_post_rc(**kwargs) -> None:
     __direnv()
 
 @events.on_chdir
-def __direnv_chdir(olddir: str, newdir: str) -> None:
+def __direnv_chdir(olddir: str, newdir: str, **kwargs) -> None:
     if ${...}.get("DIRENV_DIR") is not None:
         direnv_dir = pf"{$DIRENV_DIR.strip('-')}"
         new = pf"{newdir}".absolute()
@@ -28,5 +28,5 @@ def __direnv_chdir(olddir: str, newdir: str) -> None:
         __direnv()
 
 @events.on_postcommand
-def __direnv_postcommand(cmd: str, rtn: int, out: str or None, ts: list) -> None:
+def __direnv_postcommand(cmd: str, rtn: int, out: str or None, ts: list, **kwargs) -> None:
     __direnv()
