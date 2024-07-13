@@ -16,13 +16,13 @@ change log
 ==========
 
 1.6.2
----
+-----
 
 * PR https://github.com/74th/xonsh-direnv/pull/18
 
 
 1.6.1
----
+-----
 
 * temporary revert 1.6.0
 
