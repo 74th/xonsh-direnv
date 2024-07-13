@@ -15,6 +15,17 @@ This works with python 3.7.0, xonsh 0.8.8 and direnv 2.17.0.
 change log
 ==========
 
+1.6.2
+---
+
+* PR https://github.com/74th/xonsh-direnv/pull/18
+
+
+1.6.1
+---
+
+* temporary revert 1.6.0
+
 1.6.0
 ---
 

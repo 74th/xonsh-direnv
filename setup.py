@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setup(
     name="xonsh-direnv",
-    version="1.6.0",
+    version="1.6.2",
     license="MIT",
     url="https://github.com/74th/xonsh-direnv",
     description="direnv support for the xonsh shell",
