@@ -27,7 +27,7 @@ change log
 * temporary revert 1.6.0
 
 1.6.0
----
+-----
 
 * PR https://github.com/74th/xonsh-direnv/pull/12
 
