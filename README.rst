@@ -35,3 +35,14 @@ change log
 
 * $HOME/.envrc
 * effecting `direnv allow` immediately
+
+
+Contributors
+============
+
+* Atsushi Morimoto (@74th, original author)
+* con-f-use (@con-f-use, co-maintainer)
+* Gil Forsyth (@gforsyth, contributor)
+* Greg Hellings (@greg-hellings, contributor)
+* Andy Kipp (@anki-code, contributor)
+* Alexander Sosedkin (@t184256, contributor)
