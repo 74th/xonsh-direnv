@@ -20,7 +20,7 @@ def __direnv_post_rc(**kwargs) -> None:
 @events.on_chdir
 def __direnv_chdir(olddir: str, newdir: str, **kwargs) -> None:
     if ${...}.get("DIRENV_DIR") is not None:
-        direnv_dir = pf"{$DIRENV_DIR.strip('-')}"
+        direnv_dir = pf"{__xonsh__.env.get('DIRENV_DIR').strip('-')}"
         new = pf"{newdir}".absolute()
         if not set(direnv_dir.parts).issubset(new.parts):
             __direnv()
