@@ -1,17 +1,15 @@
 import json
 
-# workaround for https://github.com/74th/xonsh-direnv/issues/2
-$UPDATE_OS_ENVIRON = True
-
 def __direnv():
     r = $(direnv export json)
     if r:
         lines = json.loads(r)
-        for k, v in lines.items():
-            if v is None:
-                del __xonsh__.env[k]
-            else:
-                __xonsh__.env[k] = v
+        with __xonsh__.env.swap(UPDATE_OS_ENVIRON=True):  # workaround for https://github.com/74th/xonsh-direnv/issues/2
+            for k, v in lines.items():
+                if v is None:
+                    del __xonsh__.env[k]
+                else:
+                    __xonsh__.env[k] = v
 
 @events.on_post_rc
 def __direnv_post_rc(**kwargs) -> None:
