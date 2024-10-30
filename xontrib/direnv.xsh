@@ -11,8 +11,8 @@ def __direnv():
                 else:
                     __xonsh__.env[k] = v
 
-@events.on_post_rc
-def __direnv_post_rc(**kwargs) -> None:
+@events.on_post_init
+def __direnv_post_init(**kwargs) -> None:
     __direnv()
 
 @events.on_chdir
